@@ -336,6 +336,7 @@ data$weekday &lt;- weekdays(as.Date(data$date, format=&quot;%Y-%M-%d&quot;)) %in
 # replace the TRUE/FALSE values with weekend/weekday respectively
 data$weekday[data$weekday == TRUE] &lt;- &quot;weekend&quot;
 data$weekday[data$weekday == FALSE] &lt;- &quot;weekday&quot;
+data &lt;- transform(data, weekday = factor(weekday))
 </code></pre></li>
 <li><p>Make a panel plot containing a time series plot (i.e. type = &ldquo;l&rdquo;) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.</p>
 
